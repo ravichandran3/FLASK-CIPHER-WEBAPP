@@ -1,0 +1,23 @@
+
+.x{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+
+    position: absolute;
+
+    background-color:#16c291;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+}
+
+.x:hover {
+    background-color: #4CAF50;
+    color: white;
+
+
+
+}

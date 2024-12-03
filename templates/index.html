@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ravi😜">
+    <title>😜C1PH3R😜</title>
+    <style>
+        body{
+                
+                background-image: url("../static/images/encryption.jpg");
+                shape-image-threshold: inherit;
+        }
+        form{
+            padding-top: 50px;
+            height: 420px;
+            width:620px;
+            backdrop-filter: blur(5px);
+        }
+        p{
+        font-weight: bold;
+        font-size: 30px;
+        color:greenyellow;
+        position: relative;
+        top:-4px;
+       
+        }
+        #input_answer{
+            position:relative;
+            top:-4px;
+            width: 300px;
+                height: 100px;
+                border: 5px solid #3CBC8D;
+                background: #fff;
+                background-clip: padding-box;
+        
+        }
+        .pid{
+            position: relative;
+        
+            top:40px;
+        }   
+        h3{
+            text-align: center;
+            position: relative;
+            text-shadow: 15px 25px 10px rgba(0, 0, 0, 0.75);
+	        color:greenyellow;
+            font-size: 40px;
+	        
+            
+        }
+        p1{
+            position:left;
+            color:greenyellow;
+        }
+        p2{
+            color:greenyellow;
+            font-size:30px;
+        }
+        p3{
+            color:red;
+        }
+      
+        .marq{
+                color:red;
+                background-color: rgb(104, 199, 161);
+        }
+        .text_box{
+                border: 1px solid transparent;
+                border-radius: 10px;
+                /*background-color: #3CBC8D;  */
+                width: 300px;
+                height: 100px;
+                border: 5px solid #3CBC8D;
+                background: #fff;
+                background-clip: padding-box;
+        }
+            
+        .sub{
+                background-color: white; 
+                color: black; 
+                border: 2px solid #4CAF50;
+                position: absolute;
+                background-color:#08eda4;
+                border:none; 
+                border-radius:10px; 
+                padding:15px;
+                min-height:30px; 
+                min-width: 120px;
+                margin-left: -50px;
+                margin-right: 30px;
+
+
+        }
+        .sub:hover {
+                background-color: #4CAF50;
+                color: white;
+        }
+
+        .x{
+                background-color: white; 
+                color: black; 
+                border: 2px solid #4CAF50;
+                position: relative;
+                background-color:#08eda4;
+                border:none; 
+                border-radius:10px; 
+                padding:15px;
+                min-height:30px; 
+                min-width: 120px;
+                top: -4px;
+
+        }
+        .x:hover {
+                background-color: #1753cc;
+                color: white;
+        }
+        input[type=number] {
+                position: relative;
+                width: 14%;
+                padding: 8px 8px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                top: -4pt;
+        }
+    </style>
+</head>
+<body>
+
+    {% block content %}
+    
+    <h3>CIPHERX</h3>
+    <center>
+    <p1>Don't enter number,symbols in input field it won't work</p1><br><br>
+    <form action="{{ url_for('output')}}" method="POST">
+        <textarea  class="text_box" name="enter your text here"  id ="user_input" placeholder="Enter your text here:😜" rows="5" cols="40"></textarea><br>
+        <br><br>
+        <br><br>
+        <p2>CIPHER TYPE:</p2> <select name="CIPHER" id="x" class="x">
+            <option value="ENCIPHER" >ENCIPHER</option>
+            <option value="DECIPHER" >DECIPHER</option>    
+        </select>
+        <br><br>
+        <br><br>
+       <p2> ENTER KEY: </p2><input type="number"  name="key_value" min ="1" max="26"  required />
+        <br><br>
+        <input class="sub" type="submit" value="SUBMIT">
+        <br>
+        <br>
+        <br>
+    </form>
+    </center>
+    <!--<center><p id="p" >YOUR <u  style="text-decoration-color:red;text-decoration-thickness: 6px;">{{selection_type}}</u> VALUE IS: <p3>{{output}}</p3></p></center>-->
+    {% if output %}
+         {{output1}}
+    
+   <center> <p>YOUR <u style="text-decoration-color:red;text-decoration-thickness:6px;">{{selection_type}} </u>VALUE IS:</p> </center>
+   <center><textarea id="input_answer" rows="5" cols="4" >{{output}}</textarea></center>
+   <!--<center><p id="p">YOUR <u style="text-decoration-color:red;text-decoration-thickness: 6px;">{{selection_type}}</u> VALUE IS:  <textarea id="input_answer" rows="5" cols="4" >{{output}}</textarea></p></center>-->
+    {% endif %}
+    {% endblock %}
+    
+    
+    
+</body>
+</html>
